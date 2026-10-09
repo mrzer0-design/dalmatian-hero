@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mr. Zer0 — Dalmatian Dog</title>
+  <meta name="description" content="Enjoy an afternoon playing with the Dalmatian dog.">
+  <meta name="theme-color" content="#402008">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Poltawski+Nowy&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/plate.webp" type="image/webp">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section class="hero" id="hero" aria-labelledby="hero-title">
+    <!-- Cursor-driven character: static plate + frame-accurate dog layer drawn on canvas -->
+    <div class="hero__media" aria-hidden="true">
+      <div class="stage" id="stage">
+        <picture>
+          <source srcset="assets/plate.webp" type="image/webp">
+          <img class="stage__plate" src="assets/plate.jpg" alt="" width="1280" height="720" fetchpriority="high">
+        </picture>
+        <canvas class="stage__dog" id="dog" width="480" height="530"></canvas>
+      </div>
+      <div class="hero__shade"></div>
+    </div>
+
+    <header class="nav">
+      <a class="nav__brand" href="#">Mr. Zer0</a>
+      <button class="nav__toggle" id="menu-toggle" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+        <img src="assets/menu-bar.svg" alt="" width="29.0838" height="2.54261">
+        <img src="assets/menu-bar.svg" alt="" width="29.0838" height="2.54261">
+      </button>
+    </header>
+
+    <div class="hero__copy">
+      <h1 class="hero__title" id="hero-title">Enjoy an afternoon Playing with the Dalmatian Dog</h1>
+      <p class="hero__sub">Mouse follow character test</p>
+    </div>
+
+    <footer class="hero__foot">
+      <img class="hero__divider" src="assets/divider.svg" alt="" width="1218" height="1">
+      <div class="hero__row">
+        <p class="hero__text">Discover new features and updates in our latest release. Stay tuned for more exciting improvements coming your way soon.</p>
+        <button class="btn" id="play" type="button">Play with me</button>
+      </div>
+    </footer>
+
+    <nav class="menu" id="menu" aria-label="Main" hidden>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Meet the dog</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </section>
+
+
+  <script src="hero.js" defer></script>
+</body>
+</html>

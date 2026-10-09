@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Mr. Zer0 — Dalmatian Dog</title>
-  <meta name="description" content="Enjoy an afternoon playing with the Dalmatian dog.">
+  <title>Mr. Zer0 Toys — Chew toys for spotty pups</title>
+  <meta name="description" content="Tough, playful chew toys designed in the barn and approved by Mr. Zer0, our resident Dalmatian.">
   <meta name="theme-color" content="#402008">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip" href="#shop">Skip to the toys</a>
+
   <section class="hero" id="hero" aria-labelledby="hero-title">
     <!-- Cursor-driven character: static plate + frame-accurate dog layer drawn on canvas -->
     <div class="hero__media" aria-hidden="true">
@@ -28,36 +30,195 @@
 
     <header class="nav">
       <a class="nav__brand" href="#">Mr. Zer0</a>
-      <button class="nav__toggle" id="menu-toggle" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
-        <img src="assets/menu-bar.svg" alt="" width="29.0838" height="2.54261">
-        <img src="assets/menu-bar.svg" alt="" width="29.0838" height="2.54261">
-      </button>
+      <div class="nav__actions">
+        <a class="nav__cart" href="#shop" aria-live="polite">Cart <span class="nav__count" id="cart-count">0</span></a>
+        <button class="nav__toggle" id="menu-toggle" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+          <img src="assets/menu-bar.svg" alt="" width="29.0838" height="2.54261">
+          <img src="assets/menu-bar.svg" alt="" width="29.0838" height="2.54261">
+        </button>
+      </div>
     </header>
 
     <div class="hero__copy">
       <h1 class="hero__title" id="hero-title">Enjoy an afternoon Playing with the Dalmatian Dog</h1>
-      <p class="hero__sub">Mouse follow character test</p>
+      <p class="hero__sub">Chew toys, tested by spotty experts</p>
     </div>
 
     <footer class="hero__foot">
       <img class="hero__divider" src="assets/divider.svg" alt="" width="1218" height="1">
       <div class="hero__row">
-        <p class="hero__text">Discover new features and updates in our latest release. Stay tuned for more exciting improvements coming your way soon.</p>
+        <p class="hero__text">Tough, safe chew toys for curious pups. Designed in the barn and approved by Mr. Zer0 himself. Move your mouse to say hi.</p>
         <button class="btn" id="play" type="button">Play with me</button>
       </div>
     </footer>
 
     <nav class="menu" id="menu" aria-label="Main" hidden>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Meet the dog</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#shop">Shop toys</a></li>
+        <li><a href="#about">About us</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#gallery">Gallery</a></li>
       </ul>
     </nav>
   </section>
 
+  <main>
+    <!-- Products -->
+    <section class="section section--cream" id="shop" aria-labelledby="shop-title">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="eyebrow">The chew collection</p>
+          <h2 class="section__title" id="shop-title">Toys that survive the spots</h2>
+          <p class="section__lede">Three favourites from the barn, each one chewed, tugged and fetched by Mr. Zer0 before it reaches your pup.</p>
+        </header>
+
+        <ul class="products">
+          <li class="product">
+            <div class="product__media"><img src="assets/products/rope.webp" alt="Braided white rope tug with black spots and two red knotted ends" width="800" height="800" loading="lazy"></div>
+            <div class="product__body">
+              <div class="product__top">
+                <h3 class="product__name">Spotty Rope Tug</h3>
+                <p class="product__price">€14.95</p>
+              </div>
+              <p class="product__desc">Braided cotton rope with double knots. Cleans teeth while they tug.</p>
+              <button class="btn btn--dark" type="button" data-add="Spotty Rope Tug">Add to cart</button>
+            </div>
+          </li>
+          <li class="product">
+            <div class="product__media"><img src="assets/products/bone.webp" alt="Red ridged rubber chew bone with small nubs" width="800" height="800" loading="lazy"></div>
+            <div class="product__body">
+              <div class="product__top">
+                <h3 class="product__name">Barnyard Bone</h3>
+                <p class="product__price">€12.50</p>
+              </div>
+              <p class="product__desc">Natural rubber with ridges and nubs for chewers who never get tired.</p>
+              <button class="btn btn--dark" type="button" data-add="Barnyard Bone">Add to cart</button>
+            </div>
+          </li>
+          <li class="product">
+            <div class="product__media"><img src="assets/products/ball.webp" alt="Honey-yellow nubbed rubber ball with small black spots" width="800" height="800" loading="lazy"></div>
+            <div class="product__body">
+              <div class="product__top">
+                <h3 class="product__name">Hay Bale Ball</h3>
+                <p class="product__price">€9.95</p>
+              </div>
+              <p class="product__desc">A bouncy nubbed ball that is easy to grip and hard to lose in the hay.</p>
+              <button class="btn btn--dark" type="button" data-add="Hay Bale Ball">Add to cart</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section section--brown about" id="about" aria-labelledby="about-title">
+      <div class="wrap about__grid">
+        <div class="about__media">
+          <img src="assets/gallery/bone.webp" alt="Dalmatian puppy chewing a red bone on a hay bale" width="1024" height="1024" loading="lazy">
+        </div>
+        <div class="about__copy">
+          <p class="eyebrow eyebrow--light">About Mr. Zer0 Toys</p>
+          <h2 class="section__title" id="about-title">Made in a barn, tested by a Dalmatian</h2>
+          <p>Mr. Zer0 Toys started with one very spotty puppy and a pile of chewed-up slippers. We wanted toys that could keep up with him, so we started making our own from natural rubber and thick cotton rope.</p>
+          <p>Every toy is tested in the barn by Mr. Zer0 before it goes on sale. If it doesn't survive an afternoon of tugging, fetching and gnawing, it doesn't make the cut.</p>
+          <dl class="stats">
+            <div><dt>100%</dt><dd>natural rubber &amp; cotton</dd></div>
+            <div><dt>0</dt><dd>squeakers to swallow</dd></div>
+            <div><dt>4.9★</dt><dd>from happy pups</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section section--cream reviews" id="reviews" aria-labelledby="reviews-title">
+      <div class="wrap">
+        <header class="section__head section__head--center">
+          <p class="eyebrow">Reviews</p>
+          <h2 class="section__title" id="reviews-title">What the pack says</h2>
+        </header>
+
+        <div class="slider" aria-roledescription="carousel" aria-label="Customer reviews">
+          <div class="slider__track" id="slider-track" tabindex="0">
+            <figure class="slide" role="group" aria-roledescription="slide" aria-label="1 of 4">
+              <blockquote>“Pepper has destroyed every toy we've ever bought. The Barnyard Bone is three months old and still in one piece.”</blockquote>
+              <figcaption><strong>Sarah V.</strong> &amp; Pepper, 2-year-old Dalmatian</figcaption>
+            </figure>
+            <figure class="slide" role="group" aria-roledescription="slide" aria-label="2 of 4">
+              <blockquote>“The rope tug is the first thing Domino brings us every morning. Honestly, it gets more attention than we do.”</blockquote>
+              <figcaption><strong>Tom &amp; Elise</strong> &amp; Domino, 9-month-old puppy</figcaption>
+            </figure>
+            <figure class="slide" role="group" aria-roledescription="slide" aria-label="3 of 4">
+              <blockquote>“Finally a ball he can actually pick up. The nubs make it easy to grab and it bounces in all the wrong directions, which he loves.”</blockquote>
+              <figcaption><strong>Mark D.</strong> &amp; Biscuit, senior Beagle</figcaption>
+            </figure>
+            <figure class="slide" role="group" aria-roledescription="slide" aria-label="4 of 4">
+              <blockquote>“Natural materials, no squeakers to swallow and fast delivery. We ordered the whole set the second time round.”</blockquote>
+              <figcaption><strong>Leen P.</strong> &amp; Spot and Dot, two Dalmatians</figcaption>
+            </figure>
+          </div>
+
+          <div class="slider__controls">
+            <button class="slider__btn" type="button" data-dir="-1" aria-label="Previous review">
+              <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M12.5 4 6.5 10l6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="slider__dots" id="slider-dots"></div>
+            <button class="slider__btn" type="button" data-dir="1" aria-label="Next review">
+              <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="m7.5 4 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section section--brown" id="gallery" aria-labelledby="gallery-title">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="eyebrow eyebrow--light">Gallery</p>
+          <h2 class="section__title" id="gallery-title">Spots at play</h2>
+        </header>
+        <ul class="gallery">
+          <li class="g-a"><button type="button" class="gallery__item"><img src="assets/gallery/field.webp" alt="Dalmatian puppy leaping for a yellow ball in a hay field" width="1200" height="805" loading="lazy"></button></li>
+          <li class="g-b"><button type="button" class="gallery__item"><img src="assets/gallery/leaves.webp" alt="Dalmatian puppy running through autumn leaves by a fence" width="928" height="1152" loading="lazy"></button></li>
+          <li class="g-c"><button type="button" class="gallery__item"><img src="assets/gallery/barn.webp" alt="Mr. Zer0 looking up inside the barn" width="800" height="720" loading="lazy"></button></li>
+          <li class="g-d"><button type="button" class="gallery__item"><img src="assets/gallery/bone.webp" alt="Dalmatian puppy chewing a red bone on a hay bale" width="1024" height="1024" loading="lazy"></button></li>
+          <li class="g-e"><button type="button" class="gallery__item"><img src="assets/gallery/wrestle.webp" alt="Two Dalmatian puppies wrestling in the straw" width="1200" height="805" loading="lazy"></button></li>
+          <li class="g-f"><button type="button" class="gallery__item"><img src="assets/gallery/nap.webp" alt="Dalmatian puppy napping in a hay basket with a rope toy" width="1200" height="805" loading="lazy"></button></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <div>
+        <p class="footer__brand">Mr. Zer0 Toys</p>
+        <p class="footer__tag">Chew toys for spotty pups and all their friends.</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul class="footer__links">
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      </nav>
+      <p class="footer__contact">The Barn, Spot Lane 101<br><a href="mailto:woof@example.com">woof@example.com</a></p>
+    </div>
+    <div class="wrap footer__bottom">
+      <p>© 2026 Mr. Zer0 Toys. A demo store, no real toys were sold.</p>
+    </div>
+  </footer>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+    <div class="lightbox__frame" id="lightbox-frame"></div>
+    <button class="lightbox__close" type="button" id="lightbox-close" aria-label="Close image">×</button>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script src="hero.js" defer></script>
+  <script src="site.js" defer></script>
 </body>
 </html>
